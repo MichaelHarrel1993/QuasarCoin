@@ -27,7 +27,7 @@ namespace parameters {
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 10000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 6;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 138;
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
@@ -105,7 +105,7 @@ const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[]            = "blockindexes.bin
 const char     CRYPTONOTE_POOLDATA_FILENAME[]                = "poolstate.bin";
 const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121013c086a48c15fb637a96991bc6d53caf77068b5ba6eeb3c82357228c49790584a";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000180c0e7ffb78c0e027831a16342e8828415f7b495df0cdbc34381f0f05a8d6c27b3dfdfb7a70e489321018e2e274519f048965541c7fc69f963888f483bcb0e1e1c1db3af20cecd11f3c3";
 } // parameters
 
 const char     CRYPTONOTE_NAME[]                             = "QuasarCoin";

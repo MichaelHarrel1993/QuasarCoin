@@ -66,7 +66,7 @@ namespace po = boost::program_options;
 
 namespace {
 
-const command_line::arg_descriptor<std::string> arg_wallet_file = { "wallet-file", "Use wallet <arg>",  std::string(CryptoNote::CRYPTONOTE_NAME) + ".conf"};
+const command_line::arg_descriptor<std::string> arg_wallet_file = { "wallet-file", "Use wallet <arg>",  ""};
 const command_line::arg_descriptor<std::string> arg_generate_new_wallet = { "generate-new-wallet", "Generate new wallet and save it to <arg>", "" };
 const command_line::arg_descriptor<std::string> arg_daemon_address = { "daemon-address", "Use daemon instance at <host>:<port>", "" };
 const command_line::arg_descriptor<std::string> arg_daemon_host = { "daemon-host", "Use daemon instance at host <arg> instead of localhost", "" };
@@ -75,7 +75,7 @@ const command_line::arg_descriptor<uint16_t> arg_daemon_port = { "daemon-port", 
 const command_line::arg_descriptor<uint32_t> arg_log_level = { "set_log", "", INFO, true };
   const command_line::arg_descriptor<uint64_t> arg_DEFAULT_FEE  = {"DEFAULT_FEE", "Default fee", CryptoNote::parameters::DEFAULT_FEE};  
   const command_line::arg_descriptor<bool>      arg_SYNC_FROM_ZERO  = {"SYNC_FROM_ZERO", "Sync from block 0. Use for premine wallet or brainwallet", false};
-  const command_line::arg_descriptor<std::string> arg_config_file = {"config-file", "Specify configuration file", ""};  
+  const command_line::arg_descriptor<std::string> arg_config_file = {"config-file", "Specify configuration file", std::string(CryptoNote::CRYPTONOTE_NAME) + ".conf"};  
   const command_line::arg_descriptor<std::string> arg_GENESIS_COINBASE_TX_HEX  = {"GENESIS_COINBASE_TX_HEX", "Genesis transaction hex", CryptoNote::parameters::GENESIS_COINBASE_TX_HEX};  
   const command_line::arg_descriptor<uint64_t>    arg_CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  = {"CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX", "uint64_t", CryptoNote::parameters::CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX};
   const command_line::arg_descriptor<uint64_t>    arg_MONEY_SUPPLY  = {"MONEY_SUPPLY", "uint64_t", CryptoNote::parameters::MONEY_SUPPLY};

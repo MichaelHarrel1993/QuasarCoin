@@ -380,9 +380,9 @@ command_line::add_arg(desc_cmd_sett, arg_print_genesis_tx);
 
       data_dir_path = data_dir;
       boost::filesystem::path config_path(config);
-      if (!config_path.has_parent_path()) {
-        config_path = data_dir_path / config_path;
-      }
+     // if (!config_path.has_parent_path()) {
+     //   config_path = data_dir_path / config_path;
+      //}
 
       boost::system::error_code ec;
       if (boost::filesystem::exists(config_path, ec)) {

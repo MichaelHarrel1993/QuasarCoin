@@ -61,7 +61,7 @@ namespace po = boost::program_options;
 
 namespace
 {
-  const command_line::arg_descriptor<std::string> arg_config_file = {"config-file", "Specify configuration file", ""};
+  const command_line::arg_descriptor<std::string> arg_config_file = {"config-file", "Specify configuration file", std::string(CryptoNote::CRYPTONOTE_NAME) + ".conf"};
   const command_line::arg_descriptor<bool>        arg_os_version  = {"os-version", ""};
   const command_line::arg_descriptor<std::string> arg_log_file    = {"log-file", "", ""};
   const command_line::arg_descriptor<int>         arg_log_level   = {"log-level", "", 2}; // info level
@@ -394,8 +394,8 @@ command_line::add_arg(desc_cmd_sett, arg_print_genesis_tx);
         std::cout << "Configuration error: Cannot open configuration file" << std::endl;
         std::cout << "" << std::endl;
         std::cout << "Usage:" << std::endl;
-        std::cout << "Windows:   forknoted.exe --config-file configs/dashcoin.conf" << std::endl;
-        std::cout << "Linux/Mac:   ./forknoted --config-file configs/dashcoin.conf" << std::endl;
+        std::cout << "Windows:   QuasarCoind.exe --config-file QuasarCoin.conf" << std::endl;
+        std::cout << "Linux/Mac:   ./QuasarCoind --config-file QuasarCoin.conf" << std::endl;
         return false;
       }
       po::notify(vm);

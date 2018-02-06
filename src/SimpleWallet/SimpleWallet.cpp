@@ -66,7 +66,7 @@ namespace po = boost::program_options;
 
 namespace {
 
-const command_line::arg_descriptor<std::string> arg_wallet_file = { "wallet-file", "Use wallet <arg>", "" };
+const command_line::arg_descriptor<std::string> arg_wallet_file = { "wallet-file", "Use wallet <arg>",  std::string(CryptoNote::CRYPTONOTE_NAME) + ".conf"};
 const command_line::arg_descriptor<std::string> arg_generate_new_wallet = { "generate-new-wallet", "Generate new wallet and save it to <arg>", "" };
 const command_line::arg_descriptor<std::string> arg_daemon_address = { "daemon-address", "Use daemon instance at <host>:<port>", "" };
 const command_line::arg_descriptor<std::string> arg_daemon_host = { "daemon-host", "Use daemon instance at host <arg> instead of localhost", "" };
@@ -1315,10 +1315,10 @@ int main(int argc, char* argv[]) {
     std::string config = command_line::get_arg(vm, arg_config_file);
     boost::filesystem::path data_dir_path(data_dir);
     boost::filesystem::path config_path(config);
-    if (!config_path.has_parent_path())
+   /* if (!config_path.has_parent_path())
     {
       config_path = data_dir_path / config_path;
-    }
+    }*/
     boost::system::error_code ec;
     if (boost::filesystem::exists(config_path, ec))
     {
